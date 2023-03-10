@@ -1,0 +1,76 @@
+In JavaScript, bind, call, and apply are methods that allow you to set the value of this and pass arguments to a function.
+
+bind:
+
+The bind method creates a new function that, when called, has its this keyword set to the provided value, 
+with a given sequence of arguments preceding any provided when the new function is called.
+
+Here's an example:
+
+javascript
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const logName = function() {
+  console.log(this.fullName());
+}
+
+const boundLogName = logName.bind(person);
+boundLogName(); // Output: John Doe
+In the example above, bind is used to create a new function boundLogName that is bound to the person object. 
+When boundLogName is called, the this keyword inside logName refers to the person object, allowing the function to access its fullName method.
+
+call:
+
+The call method calls a function with a given this value and arguments provided individually.
+
+Here's an example:
+
+javascript
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const logName = function() {
+  console.log(this.fullName());
+}
+
+logName.call(person); // Output: John Doe
+In the example above, call is used to call the logName function with the person object as its this value. 
+The function is called immediately, without the need to create a new function.
+
+apply:
+
+The apply method is similar to call, but it takes an array of arguments instead of listing them individually.
+
+Here's an example:
+
+javascript
+
+const person = {
+  firstName: "John",
+  lastName: "Doe",
+  fullName: function() {
+    return this.firstName + " " + this.lastName;
+  }
+}
+
+const logName = function() {
+  console.log(this.fullName());
+}
+
+logName.apply(person); // Output: John Doe
+In the example above, apply is used to call the logName function with the person object as its this value. 
+The function is called immediately, without the need to create a new function. 
+The arguments are passed as an array, but since logName doesn't take any arguments, the array is empty.
