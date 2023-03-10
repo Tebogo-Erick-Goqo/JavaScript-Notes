@@ -1,0 +1,32 @@
+JavaScript events are actions or occurrences that happen on a webpage or within the browser that can trigger JavaScript code to execute.
+
+There are many types of events in JavaScript, including:
+
+Mouse events: These events occur when a user interacts with the mouse, such as clicking, moving, hovering, or dragging.
+
+Keyboard events: These events occur when a user interacts with the keyboard, such as pressing a key or releasing a key.
+
+Form events: These events occur when a user interacts with a form, such as submitting a form or changing the value of a form element.
+
+Document events: These events occur when the document is loaded, or when certain parts of the document are changed.
+
+Window events: These events occur when the window is loaded, resized, or closed.
+
+To handle these events, you can use event listeners, which are functions that are triggered when an event occurs. 
+You can attach event listeners to HTML elements using the addEventListener() method, which takes two arguments: 
+the event to listen for, and the function to call when the event occurs.
+
+Here's an example of attaching an event listener to a button element:
+
+php
+
+<button id="myButton">Click me!</button>
+
+<script>
+  const button = document.getElementById('myButton');
+  button.addEventListener('click', function() {
+    alert('Button clicked!');
+  });
+</script>
+In this example, the event listener is attached to the button element with an id of "myButton". 
+When the button is clicked, the function inside the event listener is executed, which displays an alert box with the message "Button clicked!".
