@@ -1,0 +1,37 @@
+JavaScript modules are a way to organize and encapsulate code into reusable units. 
+They allow developers to create self-contained code components that can be easily imported and used in other parts of their codebase.
+
+JavaScript modules can be defined using the import and export keywords. 
+The export keyword is used to expose functions, objects, or values from a module, 
+while the import keyword is used to bring in those exports from another module.
+
+Here is an example of a module that exports a function:
+
+javascript
+
+// math.js module
+export function add(a, b) {
+  return a + b;
+}
+This module exports a single function called add, which takes two arguments and returns their sum. 
+The export keyword exposes this function as part of the module's public API.
+
+To use this module in another part of your codebase, you would use the import keyword like this:
+
+javascript
+
+// app.js module
+import { add } from './math.js';
+
+console.log(add(2, 3)); // Output: 5
+In this example, the import keyword is used to bring in the add function from the math.js module. 
+The curly braces around add indicate that we only want to import that one function. 
+Once imported, we can use the add function in our app.js module just like any other function.
+
+JavaScript modules can also be used to export classes, objects, and even entire libraries. 
+By breaking code into small, reusable modules, developers can write more modular and maintainable code.
+
+
+
+
+
