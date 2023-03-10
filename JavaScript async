@@ -1,0 +1,28 @@
+JavaScript is a single-threaded language, which means it can only execute one task at a time.
+However, it is common for JavaScript applications to need to perform long-running or blocking operations, 
+such as making a network request or accessing a database. 
+These operations can cause the main thread to become blocked, leading to slow performance and a poor user experience.
+
+To address this issue, JavaScript provides the async and await keywords, which allow for asynchronous, non-blocking code execution.
+
+The async keyword is used to declare an asynchronous function, which will always return a promise.
+Within an async function, the await keyword can be used to pause execution until a promise is resolved or rejected. 
+This allows for asynchronous operations to be performed in a sequential, synchronous-like manner.
+
+Here's an example of an async function that makes a network request using the fetch() API:
+
+javascript
+
+async function getData() {
+  const response = await fetch('https://api.example.com/data');
+  const data = await response.json();
+  return data;
+}
+In this example, the fetch() method returns a promise that resolves to a response object. 
+The await keyword is used to pause execution until the promise is resolved, 
+and the response data is then extracted using the json() method, which also returns a promise. 
+The await keyword is used again to pause execution until the second promise is resolved, 
+and the final data is returned as a result of the async function.
+
+Overall, using async and await in JavaScript can make it easier to write and maintain asynchronous code, 
+improving the performance and user experience of JavaScript applications.
