@@ -1,0 +1,59 @@
+JavaScript functions are reusable blocks of code that perform a specific task. 
+They can be called and executed whenever needed in a program. Functions can be defined in two ways:
+
+(1.) Function Declaration:
+A function declaration begins with the function keyword, followed by the function name, and a list of parameters enclosed in parentheses. 
+The function body is enclosed in curly braces.
+
+javascript
+Copy code
+function myFunction(parameter1, parameter2) {
+  // code to be executed
+  return result;
+}
+(2.) Function Expression:
+A function expression defines a function as a part of an expression. 
+It starts with the function keyword, followed by an optional function name, a list of parameters enclosed in parentheses, 
+and the function body enclosed in curly braces. The entire expression is assigned to a variable.
+
+javascript
+
+var myFunction = function(parameter1, parameter2) {
+  // code to be executed
+  return result;
+};
+Functions can also be called in two ways:
+
+(2.1) Function Call:
+To call a function, simply write the function name followed by parentheses containing the arguments (if any).
+
+javascript
+
+myFunction(argument1, argument2);
+
+(2.2) Method Call:
+Functions can also be called as methods of an object, where the object is followed by a dot and the function name, 
+followed by parentheses containing the arguments (if any).
+
+javascript
+Copy code
+objectName.myFunction(argument1, argument2);
+Functions can also have default parameters, which are used if the function is called without passing in a value for a parameter. 
+For example:
+
+javascript
+
+function myFunction(parameter1 = "default value") {
+  // code to be executed
+}
+Functions can also return values using the return statement. 
+For example:
+
+javascript
+
+function myFunction(parameter1, parameter2) {
+  // code to be executed
+  return result;
+}
+Functions can also be used as arguments to other functions or stored in variables, 
+making them a powerful tool in JavaScript programming.
